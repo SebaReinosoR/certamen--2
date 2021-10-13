@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ficha medica</title>
+        <meta name ="author" content="Sebastian Reinoso">
+        <meta name="description" content="formulario">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--icono-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+        <!--estilos-->
+        <link rel="stylesheet" href="css/estilos.css">
+
+        <!--bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </head>
+    <body>
+       
+        
+        
+        
+        <div class="container-fluid" id="contenido">
+
+            <div id= muestra>
+                <div id=recuadro>
+                    <span class="material-icons" id=person >person</span>   
+                </div>
+                <ul id=datos>
+                    <li id=nombreMuestra>
+                        PEPE GUANCHO
+                    </li>
+                    <li id=fechaMuestra>
+                        FECHA
+                    </li>
+                    <li id=edadMuestra>
+                         EDAD
+                    </li>  
+                </ul>
+                <div id=editar>
+                    Editar
+                </div>
+
+            </div>
+            <div id=signosViatales >
+                <h3>ULTIMOS SIGNOS VITALES</h3>
+                <ul id=signosV>
+                    <li id=estatura>
+                        <label for="sigEstatura"  class= "form-label"> Estatura</label>
+                         <div id=estaturVal></div>
+                         <input type= "text" id=sigEstatura class="form-control"  pattern="[0-9.]+" maxlength="4" required style="display: none"> 
+                    </li>
+                    <li id=peso>
+                        <label for="sigPeso"  class= "form-label"> Peso</label>
+                        <div id=pesoVal></div>
+                        <input type= "text" id=sigPeso class="form-control"  pattern="[0-9.k-kK-Kg-gG-G]+" maxlength="5" required style="display: none"> 
+                    </li>
+                    <li id=frecuenciaCardiaca>
+                        <label for="sigCardiaca"  class= "form-label"> frecuencia Cardiaca</label>
+                         <input type= "text" id=sigCardiaca class="form-control"  pattern="[0-9]+" maxlength="3" required style="display: none"> 
+                         <div class= "invalid-feedback">Ingrese Nombre Valido</div>
+                         <div id=cardiacaVal></div>
+                    </li>
+                </ul>
+                <form class="row g-3 needs-validation" id= "form-editar" method="POST" novalidate style="display: none">
+                    <ul id="datosForm">
+
+                        <li id="nombreForm">
+                            <label for="subNombreForm"  class= "form-label"> Nombre Completo</label>
+                            <input type= "text" class="form-control"  pattern="[A-Za-z ]+" id="subNombreForm" maxlength="40" required> 
+                            <div class= "valid-feedback">Nombre Correcto</div>
+                            <div class= "invalid-feedback">Ingrese Nombre Valido</div>
+                        </li>
+
+                        <li id="edadForm">
+                            <label for= "subedadForm"  class= "form-label">Edad</label>
+                            <input type= "number" class="form-control"  pattern="[0-9]+" id="subedadForm"  maxlength= "2" required> 
+                            <div class= "valid-feedback">Edad Correcto</div>
+                            <div class= "invalid-feedback">Ingrese Edad Valida</div>
+                        </li> 
+                        
+                        
+                        <li id=GeneroForm>
+                            <label for="subGeneroForm"   class= "form-label"> Género</label>
+                            <select class="form-select" aria-label="Genero" id="subGeneroForm" required>
+                                <option selected disabled value="">--</option>
+                                <option value="1">Masculino</option>
+                                <option value="2">Femenino</option>
+                                <option value="3">No Binario</option>
+                              </select>
+                            <div class= invalid-feedback>Seleccione un Género</div>
+                        </li>
+
+                        <li id="fechaForm">
+                            <label for="dateForm">Fecha de Nacimiento</label>
+                            <input type="date" id="dateForm"  value="20XX-XX-XX" min="1900-01-01" max="2021-10-12" required>
+                            <div class="invalid-feedback">Ingrese Fecha Valida</div>
+                             <div class="valid-feedback">Fecha Correcta</div>
+                        </li>
+
+                        <li id="correoForm">
+                            <label for="subCorreoForm" class="form-label"> Correo Electrónico</label>
+                            <input type="email" class="form-control" pattern="[a-zA-z@.]+" id="subCorreoForm" maxlength="60" required>
+                             <div class="invalid-feedback">Ingrese Correo Electrónico Valido</div>
+                             <div class="valid-feedback">Correo Electrónico Correcto</div>
+                 
+                        </li>
+
+                        <li id="telForm">
+                            <label for="subTelForm" class="form-label">Teléfono Móvil</label>
+                            <input type="number" class= "form-control" pattern="[0-9]+" id="subTelForm" maxlength="9" required>
+                            <div class="valid-feedback">Teléfono Móvil Correcto</div>
+                            <div class="invalid-feedback">Ingrese Teléfono Móvil Valido</div>
+                        </li>
+
+                        <li id="rutForm">
+                            <label for="subRutForm" class="form-label"> RUT</label>
+                            <input type="text" class="form-control" pattern="[0-9k-kK-K]+" id="subRutForm" maxlength="9" required> 
+                            <div class="valid-feedback">RUT Correcto</div>
+                            <div class="invalid-feedback">Ingrese RUT Valido</div>
+                        </li>
+                        <li id="region">
+                            <label for="regiones"  class= "form-label">Región</label>
+                            <select class="form-select" id="regiones" ></select>    
+                        </li>
+                        <li id="comuna">    
+                            <label for="comunas"  class= "form-label">Comuna</label>
+                            <select class="form-select"  id="comunas"></select>
+                        </li>
+                        <li id="bActualizar">
+                            <button class="btn btn-primary" type="submit" id="actualizar"> Actualizar </button>
+    
+                        </li>
+                        <li id=cerrar>
+                            <button class="btn btn-info" type="button" id="cerrar" > Cerrar </button>
+                        </li>
+                    </ul>    
+                
+                
+                    </form>
+
+                    
+            </div>
+            <div id= antecedentes>
+                <ul id=aClinicos></ul> <!--deben ser dinamicos los li-->
+                    <p>Antecedetes Clínicos</p>   
+                    <span class="material-icons" id=person_add> person_add </span> 
+                    <ul id="anteClinicos"></ul>
+        
+            </div>
+            <form class="row g-3 needs-validation" id= "form-agregar" method="POST" novalidate style="display: none">
+        
+                <p>Datos Antecendentes Clínicos</p>
+
+                <ul id=agregarClinico>    
+                    <li id="motivoClinico">
+                        <input type= "text" id=motivoInput class="form-control-sm" placeholder="Motivo hospitalización" pattern="[A-Za-z]+" id="subNombreForm" maxlength="70" required>
+                        <div class="invalid-feedback">Ingrese un motivo de hospitalización</div>
+                    </li>
+                    <li id=fechaClinica>
+                        <input type="date" id="dateInput"  value="20XX-XX-XX" min="2000-01-01" max="2021-10-12" required>
+                        <div class="invalid-feedback">Ingrese Fecha Valida</div>
+                    </li>
+                    <li id=crearClinica>
+                        <button class="btn btn-secondary" type="submit" id="crear" > Crear </button>
+                    </li>
+                    
+                </ul>
+               
+            </form>
+            
+            
+          
+
+            
+
+        
+        </div>
+        
+        
+        <script data-main="js/tyS" src="js/require-jquery.js"></script>
+        <script src="js/tyS.js" async ></script>
+    </body>
+</html>

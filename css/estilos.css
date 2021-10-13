@@ -1,0 +1,161 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 50px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+body {
+  width: 100%;
+  max-width: 1200;
+  font-size: 20px;
+}
+
+#contenido {
+  width: 90%;
+  margin-top: 20px;
+}
+
+#person {
+  font-size: 150px;
+  margin: 5px;
+  padding: 5px;
+  border: solid 2px #868181;
+}
+
+#person_add {
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: -0.3em;
+}
+
+#datos li {
+  margin: 20px;
+}
+
+#contenido input {
+  width: 100%;
+}
+
+#contenido select {
+  width: 100%;
+}
+
+#muestra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#editar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#muestra li {
+  list-style-type: none;
+}
+
+#signosViatales {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#signosViatales li {
+  list-style-type: none;
+  margin: 20px;
+}
+
+#signosV {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+  border: solid 2px #868181;
+  width: 300px;
+  height: 330px;
+  position: relative;
+  left: -20%;
+}
+
+#form-editar li {
+  list-style-type: none;
+}
+
+#form-agregar li {
+  list-style-type: none;
+}
+
+#antecedentes li {
+  list-style-type: none;
+}
+
+#fechaForm {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#form-editar {
+  position: relative;
+  left: -15%;
+}
+
+#antecedentes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#agregarClinico {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+}
+
+#form-agregar {
+  height: 15%;
+  width: 50%;
+  position: relative;
+}
+/*# sourceMappingURL=estilos.css.map */
